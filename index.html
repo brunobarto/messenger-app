@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>MSN Style XP Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop">
+    <div class="msn-window" id="msnWindow">
+        <div class="title-bar">
+            <span>MSN Messenger - Conversation</span>
+            <div class="window-buttons">
+                <button>_</button>
+                <button>[]</button>
+                <button>X</button>
+            </div>
+        </div>
+
+        <div class="window-content">
+            <div class="sidebar">
+                <h3>Contacts</h3>
+                <ul id="contactsList">
+                    <!-- Rempli par JS -->
+                </ul>
+            </div>
+
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <div class="user-info">
+                        <img id="localAvatar" class="avatar" src="https://via.placeholder.com/48x48?text=ME" alt="Me">
+                        <div>
+                            <div class="username">Bruno</div>
+                            <select id="statusSelect">
+                                <option value="online">En ligne</option>
+                                <option value="away">Absent</option>
+                                <option value="busy">Occupé</option>
+                            </select>
+                            <button id="changeAvatarBtn" class="avatar-btn">Changer avatar</button>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <img id="remoteAvatar" class="avatar" src="https://via.placeholder.com/48x48?text=FR" alt="Friend">
+                        <div>
+                            <div id="remoteName" class="username">Alice</div>
+                            <div id="remoteStatus" class="status-label online">En ligne</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-area" id="chatArea">
+                    <!-- Messages -->
+                </div>
+
+                <div class="toolbar">
+                    <button id="wizzBtn">Wizz!</button>
+                    <button>Envoyer un fichier</button>
+                    <button>Emoticônes</button>
+                </div>
+
+                <div class="input-area">
+                    <textarea id="messageInput" placeholder="Tape ton message ici..."></textarea>
+                    <button id="sendBtn">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal avatar -->
+<div id="avatarModal" class="modal hidden">
+    <div class="modal-window">
+        <div class="modal-title">Choisir un avatar</div>
+
+        <div class="avatar-grid" id="avatarGrid">
+            <!-- Rempli par JS -->
+        </div>
+
+        <div class="upload-section">
+            <label class="upload-label">
+                Importer une image
+                <input type="file" id="avatarUpload" accept="image/*">
+            </label>
+        </div>
+
+        <button id="closeAvatarModal" class="close-btn">Fermer</button>
+    </div>
+</div>
+
+<!-- Sons -->
+<audio id="soundMessage" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+<audio id="soundWizz" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+<script src="app.js"></script>
+</body>
+</html>
